@@ -1,7 +1,25 @@
 <template>
-  <div>
-    <h1>Calc</h1>
-    
+  <div class="calc">
+    <div class="display">1.839292</div>
+    <div class="btn">C</div>
+    <div class="btn">+/-</div>
+    <div class="btn">%</div>
+    <div class="btn operator">&divide;</div>
+    <div class="btn">7</div>
+    <div class="btn">8</div>
+    <div class="btn">9</div>
+    <div class="btn operator">&times;</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>   
+    <div class="btn">6</div>   
+    <div class="btn operator">-</div>   
+    <div class="btn">1</div>   
+    <div class="btn">2</div>   
+    <div class="btn">3</div>   
+    <div class="btn operator">+</div> 
+    <div class="btn zero">0</div> 
+    <div class="btn">.</div>
+    <div class="btn operator">=</div>
   </div>
 </template>
 
@@ -12,4 +30,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .calc {
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 300px;
+    font-size: 8vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+  }
+
+  .display {
+    grid-column: 1 / 5;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .zero {
+    grid-column: 1 / 3;
+  }
+
+  .btn {
+    background-color: #eee;
+    border: 1px solid #999;
+  }
+
+  .operator {
+    background-color: orange;
+    color: #fff;
+  }
+
 </style>
