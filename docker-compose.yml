@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "yarn serve"
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/vue-calc
+
+# Notify container when file changes on windows
+# https://github.com/ITISFoundation/osparc-simcore/issues/93
+# pip install docker-windows-volume-watcher
+# docker-volume-watcher
